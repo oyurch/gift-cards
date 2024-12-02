@@ -3,58 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spa Gift Card</title>
+    <title>Spa Gift for My Love</title>
     <style>
-        body {
-            font-family: 'Arial', sans-serif;
+        /* Base Styles */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f9f9f9;
+            box-sizing: border-box;
         }
-        .container {
-            text-align: center;
-            padding: 20px;
-        }
-        .header {
-            background-color: #FFDDC1;
-            padding: 50px 20px;
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #FFEFBA, #FFFFFF);
             color: #444;
         }
-        .header h1 {
-            font-size: 3rem;
-            margin: 0;
+
+        /* Header */
+        .header {
+            background: linear-gradient(to right, #FF6F61, #FFABAB);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
         }
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        .header p {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        /* Main Content */
         .card {
-            background-color: #fff;
-            margin: 20px auto;
+            background: white;
+            max-width: 800px;
+            margin: 40px auto;
             padding: 30px;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 600px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
         .card h2 {
+            font-size: 2rem;
             color: #FF6F61;
         }
+        .card p {
+            margin: 15px 0;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .card .dates {
+            background: #FF6F61;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            display: inline-block;
+            margin: 20px 0;
+        }
+
+        /* Footer */
         .footer {
-            margin-top: 20px;
-            color: #777;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
             font-size: 0.9rem;
+            color: #777;
         }
     </style>
 </head>
 <body>
+
+    <!-- Header Section -->
     <div class="header">
-        <h1>A Special Gift for My Love</h1>
+        <h1>A Special Spa Gift</h1>
+        <p>Relax and Rejuvenate in a Luxurious Setting</p>
     </div>
-    <div class="container">
-        <div class="card">
-            <h2>Relax and Unwind</h2>
-            <p>Enjoy a serene spa retreat from <strong>January 10th to 12th</strong>.</p>
-            <p>This gift is for you to relax and rejuvenate in a peaceful atmosphere.</p>
-        </div>
+
+    <!-- Main Card Section -->
+    <div class="card">
+        <h2>Dear Yanulka,</h2>
+        <p>You deserve some peaceful and serene moments. Here’s a luxurious spa retreat planned especially for you.</p>
+        <p class="dates">January 10th - January 12th</p>
+        <p>Enjoy three days of relaxation, pampering, and tranquility. Let this be a time to recharge and feel truly special.</p>
     </div>
+
+    <!-- Footer Section -->
     <div class="footer">
-        <p>With all my love, your [Name]</p>
+        <p>With all my love, your Oleksandr</p>
     </div>
+
 </body>
 </html>
