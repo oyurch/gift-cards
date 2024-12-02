@@ -80,10 +80,8 @@
             position: absolute;
             top: -10px;
             left: 0;
-            background-color: white;
-            border-radius: 50%;
             pointer-events: none;
-            animation: fall linear infinite, sway ease-in-out infinite;
+            animation: fall linear infinite, sway ease-in-out infinite, fadeOut linear infinite;
         }
 
         @keyframes fall {
@@ -101,6 +99,15 @@
             }
             50% {
                 transform: translateX(20px);
+            }
+        }
+
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
             }
         }
     </style>
@@ -131,13 +138,17 @@
             const snowflake = document.createElement("div");
             snowflake.classList.add("snowflake");
 
-            // Set random size and position
-            const size = Math.random() * 10 + 5; // 5px to 15px
+            // Add a prettier snowflake using an SVG
+            snowflake.innerHTML = `
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M10 0L12 7H18L13 11L15 18L10 14L5 18L7 11L2 7H8L10 0Z" fill="white"/>
+                </svg>
+            `;
+
+            // Set random position and animation duration
             const position = Math.random() * window.innerWidth; // Random horizontal position
             const duration = Math.random() * 3 + 2; // 2s to 5s duration
 
-            snowflake.style.width = `${size}px`;
-            snowflake.style.height = `${size}px`;
             snowflake.style.left = `${position}px`;
             snowflake.style.animationDuration = `${duration}s`; // Fall duration
             snowflake.style.animationDelay = `${Math.random() * 2}s`; // Random delay
