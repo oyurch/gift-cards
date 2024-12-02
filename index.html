@@ -16,6 +16,8 @@
             background: linear-gradient(to bottom right, #FFEFBA, #FFFFFF);
             color: #444;
             overflow: hidden; /* Prevent scroll due to snowflakes */
+            position: relative;
+            height: 100vh;
         }
 
         /* Header */
@@ -75,8 +77,9 @@
 
         /* Snowflakes */
         .snowflake {
-            position: fixed;
+            position: absolute;
             top: -10px;
+            left: 0;
             background-color: white;
             border-radius: 50%;
             pointer-events: none;
@@ -85,10 +88,10 @@
 
         @keyframes fall {
             0% {
-                transform: translateY(-10px);
+                top: -10px;
             }
             100% {
-                transform: translateY(100vh);
+                top: 100vh;
             }
         }
 
