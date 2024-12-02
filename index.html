@@ -15,7 +15,7 @@
             font-family: 'Arial', sans-serif;
             background: linear-gradient(to bottom right, #FFEFBA, #FFFFFF);
             color: #444;
-            overflow: hidden; /* For snowflakes */
+            overflow: hidden; /* Prevent scroll due to snowflakes */
         }
 
         /* Header */
@@ -80,7 +80,6 @@
             background-color: white;
             border-radius: 50%;
             pointer-events: none;
-            opacity: 0.8;
             animation: fall linear infinite, sway ease-in-out infinite;
         }
 
@@ -112,43 +111,4 @@
 
     <!-- Main Card Section -->
     <div class="card">
-        <h2>Dear [Your Wife's Name],</h2>
-        <p>You deserve some peaceful and serene moments. Here’s a luxurious spa retreat planned especially for you.</p>
-        <p class="dates">January 10th - January 12th</p>
-        <p>Enjoy three days of relaxation, pampering, and tranquility. Let this be a time to recharge and feel truly special.</p>
-    </div>
-
-    <!-- Footer Section -->
-    <div class="footer">
-        <p>With all my love, [Your Name]</p>
-    </div>
-
-    <!-- Snowflakes -->
-    <script>
-        function createSnowflake() {
-            const snowflake = document.createElement("div");
-            snowflake.classList.add("snowflake");
-
-            // Random size and position
-            const size = Math.random() * 10 + 5; // 5px to 15px
-            const position = Math.random() * window.innerWidth;
-
-            // Set styles
-            snowflake.style.width = `${size}px`;
-            snowflake.style.height = `${size}px`;
-            snowflake.style.left = `${position}px`;
-            snowflake.style.animationDuration = `${Math.random() * 3 + 2}s`; // 2 to 5 seconds
-            snowflake.style.animationDelay = `${Math.random() * 3}s`; // Random delay
-
-            document.body.appendChild(snowflake);
-
-            // Remove snowflake after animation
-            snowflake.addEventListener("animationend", () => {
-                snowflake.remove();
-            });
-        }
-
-        setInterval(createSnowflake, 200); // Generate a snowflake every 200ms
-    </script>
-</body>
-</html>
+        <h2>Dear [Your Wife's Name],
