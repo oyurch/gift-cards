@@ -148,7 +148,10 @@
             // Set random position and animation duration
             const position = Math.random() * window.innerWidth; // Random horizontal position
             const duration = Math.random() * 3 + 2; // 2s to 5s duration
-
+            const size = Math.random() * 10 + 5; // 5px to 15px
+            
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
             snowflake.style.left = `${position}px`;
             snowflake.style.animationDuration = `${duration}s`; // Fall duration
             snowflake.style.animationDelay = `${Math.random() * 2}s`; // Random delay
