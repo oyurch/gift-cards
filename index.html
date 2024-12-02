@@ -111,4 +111,44 @@
 
     <!-- Main Card Section -->
     <div class="card">
-        <h2>Dear [Your Wife's Name],
+        <h2>Dear [Your Wife's Name],</h2>
+        <p>You deserve some peaceful and serene moments. Here’s a luxurious spa retreat planned especially for you.</p>
+        <p class="dates">January 10th - January 12th</p>
+        <p>Enjoy three days of relaxation, pampering, and tranquility. Let this be a time to recharge and feel truly special.</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>With all my love, [Your Name]</p>
+    </div>
+
+    <!-- Snowflakes Script -->
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement("div");
+            snowflake.classList.add("snowflake");
+
+            // Set random size and position
+            const size = Math.random() * 10 + 5; // 5px to 15px
+            const position = Math.random() * window.innerWidth; // Random horizontal position
+            const duration = Math.random() * 3 + 2; // 2s to 5s duration
+
+            snowflake.style.width = `${size}px`;
+            snowflake.style.height = `${size}px`;
+            snowflake.style.left = `${position}px`;
+            snowflake.style.animationDuration = `${duration}s`; // Fall duration
+            snowflake.style.animationDelay = `${Math.random() * 2}s`; // Random delay
+
+            document.body.appendChild(snowflake);
+
+            // Remove the snowflake after it falls
+            setTimeout(() => {
+                snowflake.remove();
+            }, duration * 1000);
+        }
+
+        // Create snowflakes at regular intervals
+        setInterval(createSnowflake, 200);
+    </script>
+</body>
+</html>
